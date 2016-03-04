@@ -113,6 +113,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#set -o vi
+
 extract () {
    if [ -f $1 ] ; then
        case $1 in
