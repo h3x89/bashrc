@@ -113,8 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#set -o vi
-
 extract () {
    if [ -f $1 ] ; then
        case $1 in
@@ -267,7 +265,7 @@ PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
 # export PS1="\[$bldgrn\]\u@\h\[$txtrst\] \w \[$bldylw\]\$git_branch\[$txtcyn\]\$git_dirty\[$txtrst\]\$ "
 
 # export PS1="\[$bldgrn\]\u@\h\[$txtrst\] \w \[\033[00m\] \[$txtylw\]\$git_branch\[$txtred\]\$git_dirty\[$txtwht\]\$ "
-export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtylw\]\$git_branch\[$txtred\]\$git_dirty\[$txtwht\]\$ "
+export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtylw\]\$git_branch\[$txtred\]\$git_dirty\[$txtwht\]\n\$ "
 
 # Default Git enabled root prompt (for use with "sudo -s")
 # export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
